@@ -9,29 +9,9 @@ const avif = require('gulp-avif')
 const webp = require('gulp-webp')
 const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
-const fonter = require('gulp-fonter')
-const ttf2woff2 = require('gulp-ttf2woff2')
 const svgSprite = require('gulp-svg-sprite')
-const include = require('gulp-include')
 
-function pages (){
-    return src('app/pages/*.html')
-    .pipe(include({
-        includePaths:'app/components'
-    }))
-    .pipe(dest('app'))
-    .pipe(browserSync.stream())
-}
 
-function fonts() {
-    return src('app/fonts/src/*.*')
-        .pipe(fonter({
-            formats: ['woff', 'ttf']
-        }))
-        .pipe(dest('app/fonts/*.ttf'))
-        .pipe(ttf2woff2())
-        .pipe(dest('app/fonts'))
-}
 function sprite() {
     return src('app/images/dist/*.svg')
         .pipe(svgSprite({
@@ -70,14 +50,12 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
-
 function styles() {
     return src('app/scss/style.scss')
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
-
 }
 function watching() {
     browserSync.init({
@@ -85,10 +63,9 @@ function watching() {
             baseDir: "app/"
         }
     })
-    watch(['app/style/style.scss'], styles)
+    watch(['app/scss/style.scss'], styles)
     watch(['app/images/src'], images)
     watch(['app/js/main.js'], scripts)
-    watch(['app/components/*','app/pages/*'], pages)
     watch(['app/*.html']).on('change', browserSync.reload)
 
 }
@@ -111,8 +88,6 @@ function building() {
         { base: 'app' })
         .pipe(dest('dist'))
 }
-exports.pages - pages;
-exports.fonts = fonts;
 exports.sprite = sprite;
 exports.styles = styles;
 exports.images = images;
@@ -120,4 +95,4 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.building = building;
 exports.build = series(cleanDist, building)
-exports.default = parallel(styles, images, scripts, pages, watching) 
+exports.default = parallel(styles, images, scripts, watching) 
