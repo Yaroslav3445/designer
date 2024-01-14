@@ -10,7 +10,7 @@ const webp = require('gulp-webp')
 const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const svgSprite = require('gulp-svg-sprite')
-
+const include = require('gulp-include')
 
 function sprite() {
     return src('app/images/dist/*.svg')
@@ -27,7 +27,7 @@ function sprite() {
 
 function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg'])
-        .pipe(newer('app/images/dist'))
+        .pipe(newer('app/images'))
         .pipe(avif({ quality: 50 }))
 
         .pipe(src('app/images/src/*.*'))
@@ -37,8 +37,8 @@ function images() {
         .pipe(src('app/images/src/*.*'))
         .pipe(newer('app/images/dist'))
         .pipe(imagemin())
-
         .pipe(dest('app/images/dist'))
+
 }
 
 
@@ -50,12 +50,14 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
+
 function styles() {
     return src('app/scss/style.scss')
         .pipe(concat('style.min.css'))
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
+
 }
 function watching() {
     browserSync.init({
@@ -83,7 +85,6 @@ function building() {
         'app/fonts/*.*',
         'app/js/main.min.js',
         'app/**/*.html',
-
     ],
         { base: 'app' })
         .pipe(dest('dist'))

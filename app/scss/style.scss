@@ -10,28 +10,21 @@ button {
 
 body {
     padding: 0;
-    background-color: #0A0A0C;
+    background: var(--Unnamed-Color, #0A0A0C);
 }
 
 .header {
-
     background-color: #171719;
 
     &__container {
-        padding: 6px 0px;
+        padding: 5px 5px;
     }
 
-    // .header__social
-
     &__social {}
-
-    // .header__network
 
     &__network {
         gap: 12px;
     }
-
-    // .header__icon
 
     &__icon {
         width: 30px;
@@ -40,11 +33,8 @@ body {
         background: var(--Unnamed-Color, rgba(85, 85, 85, 0.10));
     }
 
-    // .header__connection
-
     &__connection {
-        width: 640px;
-        gap: 10px;
+        gap: 40px;
     }
 
     &__connectionIcon {
@@ -53,14 +43,13 @@ body {
         font-family: 'satoshi';
         transition: 0.3s ease;
         cursor: pointer;
+        font-weight: 500;
 
         &:hover {
             color: var(--Unnamed-Color, #E6E6E6);
         }
 
     }
-
-    // .header__nav
 
     &__nav {
         padding-top: 15px;
@@ -76,33 +65,100 @@ body {
         }
     }
 
-    // .header__logo
-
     &__logo {
         svg {
             margin-right: 5px;
         }
     }
 
-    // .header__menu
+    &__tab {
+        margin: 5px 0px;
+
+        & .svg-list-dims {
+            width: 35px;
+            height: 35px;
+            stroke: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+            ;
+        }
+    }
 
     &__menu {}
 
-    // .header__ul
-
     &__ul {
-        gap: 47px;
+        width: 100%;
+        gap: 3vw;
     }
 
-    // .header__button
-
     &__button {
-        gap: 8px;
         display: flex;
         padding: 8px 15px;
         align-items: flex-start;
         gap: 8px;
         border-radius: 29px;
         background: var(--Unnamed-Color, linear-gradient(94deg, #194BFD -15.33%, #AD13FB 139.21%));
+    }
+
+    @media(max-width:992px) {
+
+        &__connection {
+            gap: 10px;
+            max-width: 100px;
+        }
+
+        &__connectionIcon {
+            span {
+                display: none;
+            }
+        }
+
+        &__ul {
+            li {
+                display: inherit;
+                justify-content: center;
+            }
+
+            gap: 1vw;
+        }
+
+        &__button {
+            padding: 5px 7px;
+        }
+    }
+
+    @media(max-width:768px) {
+        &__nav {
+            flex-direction: row;
+            align-items: start;
+        }
+
+        &__logo {
+            width: 120px;
+            height: 55px;
+        }
+
+        &__ul {
+            gap: 0;
+        }
+
+        &__btn {
+            height: 55px;
+            display: flex;
+            align-items: center;
+        }
+
+        &__button {
+            display: flex;
+            align-items: center;
+            width: 120px;
+            font-size: 12px;
+            height: 40px;
+        }
+    }
+
+    @media(max-width:576px) {
+        &__button {
+            width: 120px;
+            font-size: 12px;
+        }
     }
 }
