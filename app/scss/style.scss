@@ -20,6 +20,8 @@ body {
     font-weight: 700;
 }
 
+
+
 .header {
     background-color: #171719;
 
@@ -136,7 +138,6 @@ body {
         }
 
         &__logo {
-            width: 120px;
             height: 55px;
         }
 
@@ -145,6 +146,7 @@ body {
         }
 
         &__btn {
+            width: 120px;
             height: 55px;
             display: flex;
             align-items: center;
@@ -153,23 +155,27 @@ body {
         &__button {
             display: flex;
             align-items: center;
-            width: 120px;
             font-size: 12px;
             height: 40px;
         }
     }
 
     @media(max-width:576px) {
-        &__button {
-            width: 120px;
-            font-size: 12px;
+        &__connectionIcon {
+            span {
+                display: none;
+            }
+        }
+
+        &__mobile {
+            width: 100px;
+
         }
     }
 }
 
 .home {
     margin: auto;
-    max-width: 1100px;
     position: relative;
     height: 600px;
     padding: 0px 5px;
@@ -231,6 +237,7 @@ body {
         svg {
             position: absolute;
         }
+
         z-index: -1;
     }
 
@@ -259,3 +266,79 @@ body {
         z-index: -2;
     }
 }
+
+.speciality {
+    color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+
+    &__main {
+        max-width: 500px;
+
+        h1 {
+            font-size: 32px;
+            line-height: 114%;
+            font-weight: 500;
+            margin: 16px 0px;
+
+            span {
+                color: var(--Portfolio-primary, #194BFD);
+            }
+        }
+
+        p {
+            padding: 0;
+        }
+    }
+
+    &__card {
+        margin: 0px 5px;
+        gap: 16px;
+
+        div {
+            color: var(--Unnamed-Color, #E6E6E6);
+        }
+
+        p {
+            color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+        }
+    }
+
+    &__info {
+        max-width: 369px;
+        padding: 24px;
+        background: var(--Unnamed-Color, linear-gradient(233deg, #0E0E10 27.06%, rgba(23, 23, 26, 0.23) 92.12%));
+    }
+
+    &__span {
+        display: inline-block;
+        width: 19.281px;
+        height: 2px;
+        background: #194BFD;
+    }
+
+    &__min {
+        width: 7px;
+    }
+
+    &__icon {
+        position: relative;
+        height: 50px;
+        z-index: 2;
+
+        & .svg-Subtract-dims {
+            fill: var(--Unnamed-Color, linear-gradient(271deg, #353535 -35.33%, rgba(53, 53, 53, 0.00) 103.13%));
+            position: absolute;
+            left: 40%;
+            z-index: -1;
+            top: 10%;
+        }
+    }
+
+}
+
+.card {}
+
+.card-header {}
+
+.card-body {}
+
+.caed-text {}
