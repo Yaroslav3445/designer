@@ -1,7 +1,37 @@
+$purple-color: var(--Unnamed-Color, linear-gradient(94deg, #194BFD -15.33%, #AD13FB 139.21%));
+$blue-color: #194BFD;
+$background-card: var(--Unnamed-Color, linear-gradient(233deg, #0E0E10 27.06%, rgba(23, 23, 26, 0.23) 92.12%));
+$font-white: var(--Portfolio-white, #E6E6E6);
+$card-width: 369px;
+$standart-color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+$width-line: 19.281px;
+
+@mixin button {
+    padding: 8px 15px;
+    border-radius: 29px;
+    background: $purple-color;
+    font-weight: 700;
+    color: $font-white;
+}
+
+@mixin h1 {
+    line-height: 114%;
+    font-weight: 500;
+    margin: 16px 0px;
+    color: $font-white;
+}
+
+@mixin line ($width-line, $blue-color) {
+    display: inline-block;
+    width: $width-line;
+    height: 2px;
+    background: $blue-color;
+}
+
 a {
     text-decoration: none;
     font-family: satoshi;
-    color: #E6E6E6;
+    color: $font-white;
 }
 
 button {
@@ -12,15 +42,6 @@ body {
     padding: 0;
     background: var(--Unnamed-Color, #0A0A0C);
 }
-
-.main__button {
-    padding: 8px 15px;
-    border-radius: 29px;
-    background: var(--Unnamed-Color, linear-gradient(94deg, #194BFD -15.33%, #AD13FB 139.21%));
-    font-weight: 700;
-}
-
-
 
 .header {
     background-color: #171719;
@@ -48,14 +69,14 @@ body {
 
     &__connectionIcon {
         gap: 5px;
-        color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+        color: $standart-color;
         font-family: 'satoshi';
         transition: 0.3s ease;
         cursor: pointer;
         font-weight: 500;
 
         &:hover {
-            color: var(--Unnamed-Color, #E6E6E6);
+            color: $font-white;
         }
 
     }
@@ -67,10 +88,10 @@ body {
     }
 
     &__href {
-        color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+        color: $standart-color;
 
         &:hover {
-            color: var(--Unnamed-Color, #E6E6E6);
+            color: $font-white;
         }
     }
 
@@ -86,7 +107,7 @@ body {
         & .svg-list-dims {
             width: 35px;
             height: 35px;
-            stroke: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+            stroke: $standart-color;
             ;
         }
     }
@@ -94,6 +115,10 @@ body {
     &__ul {
         width: 100%;
         gap: 3vw;
+    }
+
+    &__button {
+        @include button
     }
 
     @media(max-width:992px) {
@@ -175,49 +200,48 @@ body {
 }
 
 .home {
-    margin: auto;
-    position: relative;
-    height: 600px;
     padding: 0px 5px;
+
+    &__wrap {
+        position: relative;
+        width: 1140px;
+        height: 600px;
+    }
 
     &__baner {
         max-width: 541px;
     }
 
-    // .home__h1
-
     &__h1 {
         max-width: 419px;
-        color: var(--Portfolio-white, #E6E6E6);
+        color: $font-white;
         font-size: 58.575px;
         font-weight: 300;
         line-height: 114%;
 
         span {
-            color: var(--Portfolio-primary, #194BFD);
+            color: $blue-color;
             font-size: 58.575px;
             font-weight: 700;
         }
     }
 
-    // .home__paragraf
 
     &__paragraf {
-        color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+        color: $standart-color;
         font-family: Satoshi;
         font-size: 16px;
         font-weight: 400;
     }
 
-    // .home__main-btn
 
     &__main-btn {
         max-width: 350px;
     }
 
-    // .home__btn
-
-    &__btn {}
+    &__btn {
+        @include button;
+    }
 
     // .home__href
 
@@ -236,6 +260,7 @@ body {
 
         svg {
             position: absolute;
+
         }
 
         z-index: -1;
@@ -251,8 +276,15 @@ body {
         bottom: 5%;
     }
 
-    &__star {
-        right: 0;
+    &__curcle {
+        position: absolute;
+        right: -5%;
+        bottom: 28%;
+        width: 134px;
+        height: 134px;
+        border: 1px solid var(--Unnamed-Color, #AD13FB);
+        border-radius: 50%;
+
     }
 
     // .home__background
@@ -268,20 +300,13 @@ body {
 }
 
 .speciality {
-    color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+    color: $standart-color;
 
     &__main {
         max-width: 500px;
 
         h1 {
-            font-size: 32px;
-            line-height: 114%;
-            font-weight: 500;
-            margin: 16px 0px;
-
-            span {
-                color: var(--Portfolio-primary, #194BFD);
-            }
+            @include h1
         }
 
         p {
@@ -289,40 +314,43 @@ body {
         }
     }
 
+    &__soft {
+        color: $blue-color;
+    }
+
     &__card {
         margin: 0px 5px;
         gap: 16px;
 
         div {
-            color: var(--Unnamed-Color, #E6E6E6);
+            color: $standart-color;
         }
 
         p {
-            color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
+            color: $standart-color;
         }
     }
 
     &__info {
-        max-width: 369px;
+        max-width: $card-width;
         padding: 24px;
-        background: var(--Unnamed-Color, linear-gradient(233deg, #0E0E10 27.06%, rgba(23, 23, 26, 0.23) 92.12%));
-    }
+        background: $background-card;
 
-    &__span {
-        display: inline-block;
-        width: 19.281px;
-        height: 2px;
-        background: #194BFD;
-    }
+        p {
+            padding-top: 16px;
+        }
 
-    &__min {
-        width: 7px;
+        h5 {
+            color: $font-white;
+        }
     }
 
     &__icon {
         position: relative;
         height: 50px;
         z-index: 2;
+
+
 
         & .svg-Subtract-dims {
             fill: var(--Unnamed-Color, linear-gradient(271deg, #353535 -35.33%, rgba(53, 53, 53, 0.00) 103.13%));
@@ -333,12 +361,153 @@ body {
         }
     }
 
+    &__blue-line {
+        @include line ($width-line, $blue-color)
+    }
+
+    &__blue-line-min {
+        @include line (7px, $blue-color)
+    }
+
 }
 
-.card {}
+.services {
+    &__wrap {
+        margin: 0px 5px;
+        max-width: 1140px;
+        gap: 16px;
+    }
 
-.card-header {}
+    &__main {
+        color: $standart-color;
+        max-width: 500px;
 
-.card-body {}
+        h1 {
+            @include h1
+        }
 
-.caed-text {}
+    }
+
+    span {
+        font-family: 'satoshi';
+    }
+
+    &__span {
+        color: $blue-color;
+    }
+
+    &__info {
+        max-width: $card-width;
+        background: $background-card;
+        margin-top: 10%;
+    }
+
+    &__icon {
+        position: relative;
+        height: 50px;
+
+        svg {
+            position: absolute;
+            top: -105%;
+        }
+    }
+
+    &__body {
+        color: $standart-color;
+
+        h5 {
+            color: $font-white;
+        }
+
+        position: relative;
+
+    }
+
+    &__line {
+        padding: 16px 0px;
+    }
+
+    &__blue-line {
+        @include line ($width-line, $blue-color)
+    }
+
+    &__blue-line-min {
+        @include line (7px, $blue-color)
+    }
+
+    &__button {
+        max-width: 176px;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 29px;
+        background: var(--Unnamed-Color, #18181D);
+        color: $font-white;
+        padding: 12px 18px;
+        margin: auto;
+
+        span {
+            margin-right: 10px;
+        }
+    }
+
+}
+
+.portfolio {
+
+    &__main {
+        max-width: 426px;
+
+        p {
+            color: $font-white;
+        }
+
+    }
+
+    &__h1 {
+        @include h1
+    }
+
+    &__span {
+        color: $font-white;
+    }
+
+    &__blue {
+        color: $blue-color;
+    }
+
+    &__background {
+        max-width: 100%;
+        position: relative;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__button {
+        width: 196px;
+        @include button;
+        position: absolute;
+        font-size: 14px;
+    }
+}
+
+.recomend {
+
+    &__wrap {
+        max-width: 1140px;
+        gap: 7%;
+        color: $font-white;
+    }
+
+    &__portret {}
+
+
+    &__text {}
+
+
+    &__signature {
+        width: 155px;
+        height: 55.396px;
+    }
+}
