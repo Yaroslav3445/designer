@@ -5,6 +5,7 @@ $font-white: var(--Portfolio-white, #E6E6E6);
 $card-width: 369px;
 $standart-color: var(--Unnamed-Color, rgba(230, 230, 230, 0.51));
 $width-line: 19.281px;
+$border: 1px solid var(--Unnamed-Color, #AD13FB);
 
 @mixin button {
     padding: 8px 15px;
@@ -282,7 +283,7 @@ body {
         bottom: 28%;
         width: 134px;
         height: 134px;
-        border: 1px solid var(--Unnamed-Color, #AD13FB);
+        border: $border;
         border-radius: 50%;
 
     }
@@ -460,7 +461,6 @@ body {
         p {
             color: $font-white;
         }
-
     }
 
     &__h1 {
@@ -493,21 +493,118 @@ body {
 }
 
 .recomend {
+    min-height: 588px;
 
     &__wrap {
-        max-width: 1140px;
-        gap: 7%;
+        display: flex;
+        width: 1228px;
         color: $font-white;
     }
 
-    &__portret {}
+    &__portret {
+        position: relative;
+        max-width: fit-content;
+
+        img {
+            width: 369px;
+            height: 443.385px;
+        }
+    }
+
+    &__border {
+        position: absolute;
+        max-width: fit-content;
+        border: $border;
+        border-radius: 50%;
+        right: -60px;
+        bottom: -60px;
+    }
+
+    &__text {
+        position: relative;
+        max-width: 600px;
+        color: $font-white;
+
+        h1 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        p {
+            font-family: Satoshi;
+            color: $standart-color;
+            font-size: 14px;
+        }
+    }
 
 
-    &__text {}
+    &__image {
+        position: absolute;
+        top: -20%;
+    }
 
 
     &__signature {
         width: 155px;
         height: 55.396px;
     }
+
+    @media(max-width: 768px) {
+        &__text {
+            max-width: 100%;
+        }
+
+        &__portet {
+            margin: auto;
+        }
+    }
+}
+
+.teams {
+    &__wrap {
+       max-width: 1140px;
+       gap: 40px;
+    }
+
+    &__main {
+        color: $standart-color;
+        max-width: 500px;
+
+        h1 {
+            @include h1
+        }
+    }
+
+    span {
+        font-family: 'satoshi';
+    }
+
+    &__span {
+        color: $blue-color;
+    }
+
+    &__blue {
+        color: $blue-color;
+    }
+
+    &__person {
+        h3 {
+            color: $font-white;
+        }
+
+        p {
+            color: $standart-color;
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+    }
+
+    &__background {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+    }
+
 }
