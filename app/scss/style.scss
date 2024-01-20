@@ -381,6 +381,84 @@ li {
 
 }
 
+.process {
+
+    &__main {
+        color: $standart-color;
+        max-width: 500px;
+
+        h1 {
+            @include h1
+        }
+    }
+
+    &__wrap {
+        width: 1151px;
+    }
+
+    span {
+        font-family: 'satoshi';
+    }
+
+    &__span {
+        color: $blue-color;
+    }
+
+    &__blue {
+        color: $blue-color;
+    }
+
+    &__main {}
+
+    &__span {}
+
+    &__h1 {}
+
+    &__blue {}
+
+    &__container {
+        width: 100%;
+    }
+
+    &__container2 {
+        width: 1151px;
+    }
+
+    &__diamond {
+        width: 330px;
+        height: 200.157px;
+        position: relative;
+
+        span {
+            z-index: 1;
+            font-family: "Space Grotesk";
+            font-size: 18px;
+            color: $font-white;
+        }
+    }
+
+    &__image {
+        width: 200.157px;
+        height: 200.157px;
+    }
+
+    &__romb {
+        width: 220px;
+        height: 220px;
+        bottom: -15%;
+    }
+
+    &__absolute {
+        position: absolute;
+    }
+
+    &__index {
+        position: absolute;
+        z-index: 10;
+        background-color: #194BFD;
+    }
+}
+
 .services {
     &__wrap {
         margin: 0px 5px;
@@ -506,7 +584,8 @@ li {
 
     &__wrap {
         display: flex;
-        width: 1228px;
+        justify-content: space-between;
+        width: 1140px;
         color: $font-white;
     }
 
@@ -544,6 +623,7 @@ li {
             color: $standart-color;
             font-size: 14px;
         }
+
     }
 
 
@@ -558,13 +638,13 @@ li {
         height: 55.396px;
     }
 
-    @media(max-width: 768px) {
-        &__text {
-            max-width: 100%;
+    @media (max-width:1200px) {
+        &__wrap {
+            justify-content: center;
         }
 
-        &__portet {
-            margin: auto;
+        &__text {
+            max-width: 100%;
         }
     }
 }
@@ -629,12 +709,16 @@ li {
 .idea {
 
     &__container {
-        width: 1031px;
+        width: 80%;
         height: 170px;
         position: relative;
     }
 
-    &__massage {}
+    &__massage {
+        img {
+            margin-right: 10px;
+        }
+    }
 
     &__text {
         h2 {
@@ -651,24 +735,36 @@ li {
     &__btn {
         width: 215px;
         height: fit-content;
-        @include button()
+        @include button;
+        font-size: 14px;
     }
 
     &__walls {
         position: absolute;
         z-index: -1;
     }
+
+
+    @media (max-width:768px) {
+
+        &__btn {
+            max-width: 110px;
+        }
+    }
+}
+
+@media(max-width: 1150px) {
+    .idea {
+
+        img {
+            max-width: 100%;
+        }
+    }
 }
 
 .footer {
     h5 {
         color: $font-white;
-    }
-
-    &__wrap {}
-
-    &__menu {
-        width: 1140px;
     }
 
     &__network {
@@ -696,7 +792,6 @@ li {
         background: var(--Unnamed-Color, rgba(85, 85, 85, 0.1));
     }
 
-    &__navigation {}
 
     &__ul {
         padding: 0;
@@ -708,7 +803,9 @@ li {
         }
     }
 
-    &__info {}
+    &__info {
+        max-width: 170px;
+    }
 
     &__line {
         width: 100%;
@@ -721,76 +818,10 @@ li {
         display: block;
         margin-bottom: 1.5%;
     }
-}
 
-.process {
-
-    &__main {
-        color: $standart-color;
-        max-width: 500px;
-
-        h1 {
-            @include h1
+    @media (max-width:768px) {
+        &__info {
+            max-width: 100%;
         }
-    }
-
-    &__wrap {
-        width: 1151px;
-    }
-
-    span {
-        font-family: 'satoshi';
-    }
-
-    &__span {
-        color: $blue-color;
-    }
-
-    &__blue {
-        color: $blue-color;
-    }
-
-    &__main {}
-
-    &__span {}
-
-    &__h1 {}
-
-    &__blue {}
-
-    &__container {
-        width: 100%;
-    }
-
-    &__container2 {
-        width: 1151px;
-    }
-
-    &__diamond {
-        width: 330px;
-        height: 200.157px;
-        position: relative;
-
-        span {
-            z-index: 1;
-            font-family: "Space Grotesk";
-            font-size: 18px;
-            color: $font-white;
-        }
-    }
-
-    &__image {
-        width: 200.157px;
-        height: 200.157px;
-    }
-
-    &__romb {
-        width: 220px;
-        height: 220px;
-        bottom: -15%;
-    }
-
-    &__absolute {
-        position: absolute;
     }
 }
