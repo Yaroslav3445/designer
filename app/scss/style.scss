@@ -53,8 +53,15 @@ li {
     color: $standart-color
 }
 
+section {
+    padding: 4vw 0vw;
+}
+
 .header {
+    width: 100%;
+    position: fixed;
     background-color: #171719;
+    z-index: 3;
 
     &__container {
         padding: 5px 5px;
@@ -98,11 +105,15 @@ li {
     }
 
     &__href {
-        color: $standart-color;
+        color: $background-card;
 
         &:hover {
             color: $font-white;
         }
+    }
+
+    .class-active {
+        color: $font-white;
     }
 
     &__logo {
@@ -214,7 +225,6 @@ li {
 
     &__wrap {
         position: relative;
-        width: 1140px;
         height: 600px;
     }
 
@@ -236,14 +246,12 @@ li {
         }
     }
 
-
     &__paragraf {
         color: $standart-color;
         font-family: Satoshi;
         font-size: 16px;
         font-weight: 400;
     }
-
 
     &__main-btn {
         max-width: 350px;
@@ -253,15 +261,11 @@ li {
         @include button;
     }
 
-    // .home__href
-
     &__href {
         display: flex;
         justify-content: space-between;
         font-weight: 700;
     }
-
-    // .home__portret
 
     &__portret {
         position: absolute;
@@ -296,8 +300,6 @@ li {
         border-radius: 50%;
 
     }
-
-    // .home__background
 
     &__background {
         position: absolute;
@@ -592,11 +594,6 @@ li {
     &__portret {
         position: relative;
         max-width: fit-content;
-
-        img {
-            width: 369px;
-            height: 443.385px;
-        }
     }
 
     &__border {
@@ -643,8 +640,32 @@ li {
             justify-content: center;
         }
 
+        &__portret {
+            margin-bottom: 5vw;
+        }
+
         &__text {
             max-width: 100%;
+        }
+    }
+
+    @media (max-width:576px) {
+        &__portret {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &__border {
+            width: 80px;
+            height: 80px;
+            right: 0px;
+            bottom: 0px;
+
+            svg {
+                width: 80px;
+                height: 80px;
+            }
         }
     }
 }
@@ -702,12 +723,11 @@ li {
 
     &__command {
         max-width: 300px;
-        height: 329px;
     }
 }
 
 .idea {
-
+padding-top: 5vw;
     &__container {
         width: 80%;
         height: 170px;
@@ -763,6 +783,12 @@ li {
 }
 
 .footer {
+    padding: 2vw 0vw 0vw 0vw;
+
+    &__wrap {
+        width: 1200px;
+    }
+
     h5 {
         color: $font-white;
     }
@@ -792,19 +818,19 @@ li {
         background: var(--Unnamed-Color, rgba(85, 85, 85, 0.1));
     }
 
-
     &__ul {
         padding: 0;
     }
 
     &__li {
         span {
+            width: 100%;
             margin-left: 5px;
         }
     }
 
     &__info {
-        max-width: 170px;
+        max-width: 200px;
     }
 
     &__line {
@@ -819,9 +845,11 @@ li {
         margin-bottom: 1.5%;
     }
 
-    @media (max-width:768px) {
+    @media (max-width:992px) {
         &__info {
             max-width: 100%;
         }
     }
+
+    @media (max-width:768px) {}
 }

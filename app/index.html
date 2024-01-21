@@ -60,7 +60,7 @@
                 </div>
             </div>
             <nav class="header__nav navbar navbar-expand-md navbar-light d-flex justify-content-between">
-                <div class="header__logo header__mobile d-flex align-items-center j">
+                <div class="header__logo header__mobile d-flex align-items-center ">
                     <svg width="24px" ; height="24px" ;>
                         <use xlink:href="images/dist/sprite.svg#downloading"></use>
                     </svg>
@@ -76,22 +76,22 @@
                     </button>
                     <ul class="header__ul navbar-nav" id="navbarNav">
                         <li class=" nav-item">
-                            <a class="header__href nav-link " href="#">Home</a>
+                            <a class="header__href nav-link" href="#section1">Home</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="header__href nav-link " href="#">Servise</a>
+                            <a class="header__href nav-link" href="#section3">Servise</a>
                         </li>
                         <li class="nav-item">
-                            <a class="header__href  nav-link " href="#">Projects</a>
+                            <a class="header__href  nav-link" href="#section4">Projects</a>
                         </li>
-                        <li class="header__href nav-item">
-                            <a class="header__href  nav-link " href="#">About</a>
+                        <li class="nav-item">
+                            <a class="header__href  nav-link" href="#section4">About</a>
                         </li>
-                        <li class="header__href nav-item ">
-                            <a class="header__href  nav-link" href="#">Client</a>
+                        <li class=" nav-item ">
+                            <a class="header__href nav-link" href="#section2">Client</a>
                         </li>
-                        <li class="header__href nav-item ">
-                            <a class="header__href  nav-link " href="#">Contact</a>
+                        <li class=" nav-item ">
+                            <a class="header__href nav-link" href="#section6">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -105,11 +105,11 @@
     </header>
 
     <main>
-        <section>
+        <section id="section1">
             <div class="home d-flex flex-row justify-content-center">
-                <div class="home__wrap d-flex align-items-center">
+                <div class="home__wrap container d-flex align-items-center">
                     <div class="home__baner">
-                        <h1 class="home__h1">This is your designer
+                        <h1 class="home__h1 text-small">This is your designer
                             <span> Esther Howard</span>
                         </h1>
                         <p class="home__paragraf">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -141,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section2">
             <div class="speciality d-flex align-items-center flex-column">
                 <div class="speciality__main d-flex align-items-center flex-column justify-content-between text-center">
                     <span>SPECIALITY</span>
@@ -258,7 +258,7 @@
                 </div>
             </div>
         </section> -->
-        <section>
+        <section id="section3">
             <div class="services d-flex flex-column align-items-center">
                 <div class="services__main d-flex justify-content-center text-center flex-column">
                     <span>SERVICES</span>
@@ -402,7 +402,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section4">
             <div class="portfolio d-flex flex-column align-items-center text-center">
                 <div class="portfolio__main">
                     <span class="portfolio__span">PORTFOLIOS</span>
@@ -416,7 +416,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section5">
             <div class="recomend d-flex justify-content-center align-items-center">
                 <div class="recomend__wrap container row">
                     <div class="recomend__portret  justify-content-center">
@@ -462,9 +462,9 @@
                     <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
                         duis enim velit mollit.</p>
                 </div>
-                <div class="teams__wrap  row justify-content-center">
+                <div class="teams__wrap  row justify-content-center align-items-center">
                     <div class="teams__command col">
-                        <div class="teams__person">
+                        <div class="teams__person d-flex justify-content-between flex-column">
                             <div class="teams__image-wrap">
                                 <img class="teams__background" src="images/dist/Rectangle.png" alt="background">
                                 <img class="teams__image" src="images/dist/man 1.png" alt="teams">
@@ -505,8 +505,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section>
             <div class="idea container d-flex justify-content-center align-items-center">
                 <div class="idea__container d-flex justify-content-between align-items-center">
                     <div class="idea__massage d-flex flex-row align-items-center">
@@ -522,8 +520,8 @@
             </div>
         </section>
     </main>
-    <footer class="footer  d-flex justify-content-center">
-        <div class="footer__wrap  d-flex flex-column  align-items-center ">
+    <footer class="footer d-flex justify-content-center" id="section6">
+        <div class="footer__wrap container  d-flex flex-column  align-items-center ">
             <div class="footer__menu container d-flex flex-row  justify-content-between row">
                 <div class="footer__network d-flex flex-column col-12 col-sm-6 col-md-3 col-lg-auto">
                     <div class="footer__designer d-flex flex-row">
@@ -582,16 +580,23 @@
                 <div class="footer__info col-12 col-sm-6 col-md-3 col-lg-auto">
                     <h5>Contacts</h5>
                     <ul class="footer__ul">
-                        <li class="footer__li d-flex flex-row"> <svg width="20px" ; height="20px" ;>
-                                <use xlink:href="images/dist/sprite.svg#call"></use>
-                            </svg><span>+223 456 789</span></li>
-                        <li class="footer__li d-flex flex-row"> <svg width="20px" ; height="20px" ;>
-                                <use xlink:href="images/dist/sprite.svg#send"></use>
-                            </svg><span></span>example@gmail.com</span></li>
-                        <li class="footer__li d-flex flex-row"> <svg width="20px" ; height="20px" ;>
-                                <use xlink:href="images/dist/sprite.svg#location"></use>
-                            </svg><span>6391 Elgin St. Celina, Delaware</span>
-                        </li>
+                        <div>
+                            <li class="footer__li d-flex flex-row">
+                                <div><svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#call"></use>
+                                    </svg>
+                                </div><span>+223 456 789</span>
+                            </li>
+                            <li class="footer__li d-flex flex-row">
+                                <div><svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#send"></use>
+                                    </svg></div><span>example@gmail.com</span>
+                            </li>
+                            <li class="footer__li d-flex flex-row">
+                                <div> <svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#location"></use>
+                                    </svg></div><span>6391 Elgin St. Celina, Delaware</span>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -599,18 +604,13 @@
             <span class="footer__end">Copyright 2022 | All Rights Reserved</span>
         </div>
     </footer>
-
-    <svg width="20px" ; height="20px" ;>
-        <use xlink:href="images/dist/sprite.svg#arrowenergo"></use>
-    </svg>
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
