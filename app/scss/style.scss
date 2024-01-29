@@ -58,7 +58,24 @@ li {
 }
 
 section {
-    padding: 4vh 0vw;
+    padding-top: clamp(50px, 14vw, 16vh);
+}
+
+.down {
+    margin-bottom: clamp(45px, 9vw, 64px);
+}
+
+#section1 {
+    padding-top: clamp(14vh, 14vw, 16vh);
+}
+
+.background {
+    position: relative;
+    background-image: url("../images/dist/bodyline.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    
 }
 
 .header {
@@ -68,7 +85,7 @@ section {
     z-index: 3;
 
     &__container {
-        padding: 5px 5px;
+        padding-top: 5px;
     }
 
     &__social {}
@@ -196,7 +213,7 @@ section {
         }
 
         &__btn {
-            width: 120px;
+            width: 95px;
             height: 55px;
             display: flex;
             align-items: center;
@@ -225,14 +242,12 @@ section {
 }
 
 .home {
-    padding: 0px 5px;
 
     &__wrap {
         position: relative;
-        height: 640px;
+        height: 600px;
         display: flex;
         align-items: center;
-
     }
 
     &__baner {
@@ -272,9 +287,12 @@ section {
     }
 
     &__href {
+        width: 162px;
         display: flex;
         justify-content: space-between;
         font-weight: 700;
+        font-size: 14px;
+        background-color: #00001000;
     }
 
     &__portret {
@@ -301,7 +319,7 @@ section {
 
     &__curcle {
         position: absolute;
-        right: -5%;
+        right: 0%;
         bottom: 28%;
         width: 134px;
         height: 134px;
@@ -313,7 +331,7 @@ section {
     &__background {
         position: absolute;
         width: 100%;
-        height: 50vh;
+        height: 57%;
         bottom: 5%;
         background: var(--Unnamed-Color, linear-gradient(233deg, #17171A 27.06%, rgba(23, 23, 26, 0.00) 92.12%));
         z-index: -2;
@@ -321,7 +339,8 @@ section {
 
     @media (max-width:768px) {
         &__wrap {
-            margin-top: 140px;
+            margin-top: 65px;
+            height: 640px;
             display: flex;
             align-items: start;
             justify-content: center;
@@ -393,9 +412,6 @@ section {
     }
 
     &__card {
-        margin: 0px 5px;
-        gap: 16px;
-
         div {
             color: $standart-color;
         }
@@ -403,13 +419,14 @@ section {
         p {
             color: $standart-color;
         }
+
+        gap: 16px;
     }
 
     &__info {
         max-width: $card-width;
         padding: 24px;
         background: $background-card;
-        margin-top: clamp(40px, 5vw, 64px);
 
         p {
             padding-top: 16px;
@@ -457,45 +474,34 @@ section {
         }
     }
 
-    &__wrap {
-        width: 1151px;
-    }
-
     span {
         font-family: 'satoshi';
     }
 
     &__span {
-        color: $blue-color;
+        color: $standart-color;
     }
 
     &__blue {
         color: $blue-color;
     }
 
-    &__main {}
-
-    &__span {}
-
-    &__h1 {}
-
-    &__blue {}
-
-    &__container {
-        width: 100%;
-    }
-
-    &__container2 {
-        width: 1151px;
-        display: flex;
-        justify-content: end;
+    &__link {
+        width: 470px;
+        position: relative;
     }
 
     &__diamond {
         height: 200.157px;
         position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
 
         span {
+            display: flex;
+            width: 100px;
+            justify-content: center;
             z-index: 1;
             font-family: "Space Grotesk";
             font-size: 18px;
@@ -504,19 +510,24 @@ section {
 
     }
 
+    &__diamond-position {
+        bottom: 36px;
+    }
 
     &__image {
         width: 200.157px;
         height: 200.157px;
-        transform: rotate(45deg);
 
+    }
+
+    &__name {
+        position: absolute;
     }
 
     &__romb {
         width: 220px;
         height: 220px;
         bottom: -15%;
-        transform: rotate(45deg);
     }
 
     &__absolute {
@@ -529,26 +540,73 @@ section {
         background-color: #194BFD;
     }
 
+    &__arrow {
+        position: absolute;
+        z-index: 1;
 
-    @media (max-width:1200px) {
-        &__image {
-            transform: rotate(45deg);
-        }
+    }
 
-        &__romb {
-            transform: rotate(45deg);
-        }
+    &__purple1 {
+        right: -6%;
+        bottom: 4%;
+    }
+
+    &__purple2 {
+        top: 5%;
+        right: 31%;
+        transform: rotate(-90deg);
+    }
+
+    &__purple3 {
+        top: 2%;
+        right: -4%;
+    }
+
+    &__purple4 {
+        right: 30%;
+        top: 84%;
+    }
+
+    @media (max-width:992px) {
 
         &__container {
-            display: flex;
-            justify-content: center;
+            gap: 60px;
         }
+
+        &__link {
+            gap: 60px;
+        }
+
+        &__diamond-position {
+            bottom: 0;
+        }
+
+        &__purple {
+            top: auto;
+            right: 47%;
+            bottom: -21%;
+            transform: rotate(45deg);
+        }
+
+    }
+
+    @media (max-width:768px) {
+        &__link {
+            width: 300px;
+        }
+
+        &__purple {
+            left: 45%;
+        }
+    }
+
+    @media (max-width:500px) {
+        &__purple {}
     }
 }
 
 .services {
     &__wrap {
-        margin: 0px 5px;
         max-width: 1140px;
         gap: 16px;
 
@@ -557,7 +615,6 @@ section {
     &__main {
         color: $standart-color;
         max-width: 500px;
-        margin-bottom: 40px;
 
         h1 {
             @include h1
@@ -631,6 +688,7 @@ section {
 
 .portfolio {
 
+
     &__main {
         max-width: 426px;
 
@@ -674,6 +732,7 @@ section {
     &__wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 1140px;
         color: $font-white;
     }
@@ -710,12 +769,10 @@ section {
 
     }
 
-
     &__image {
         position: absolute;
         top: -20%;
     }
-
 
     &__signature {
         width: 155px;
@@ -746,7 +803,7 @@ section {
         &__border {
             width: 80px;
             height: 80px;
-            right: 0px;
+            right: 20px;
             bottom: 0px;
 
             svg {
@@ -777,7 +834,7 @@ section {
     }
 
     &__span {
-        color: $blue-color;
+        color: $standart-color;
     }
 
     &__blue {
@@ -804,6 +861,7 @@ section {
 
     &__background {
         position: absolute;
+        left: -1%;
         z-index: -1;
         bottom: 0;
     }
@@ -814,25 +872,27 @@ section {
 }
 
 .idea {
-    padding-top: 10vh;
+    padding: clamp(60px, 10vw, 100px) 0px;
 
     &__container {
         max-width: 1031px;
         display: flex;
         justify-content: space-between;
         position: relative;
+        overflow: hidden;
     }
 
     &__massage {
+
         img {
-            width: 85px;
-            height: 85px;
+            width: clamp(40px, 8vw, 85px);
         }
     }
 
     &__text {
         h2 {
             color: $font-white;
+            font-size: clamp(18px, 1vw, 32px)
         }
 
         p {
@@ -843,7 +903,7 @@ section {
     }
 
     &__btn {
-        width: 215px;
+        width: clamp(130px, 20vw, 215px);
         height: fit-content;
         @include button;
         font-size: 14px;
@@ -852,7 +912,8 @@ section {
     &__walls {
         position: absolute;
         z-index: -1;
-        max-width: 100%;
+        width: 100%;
+        height: 170px;
     }
 
 
@@ -881,7 +942,6 @@ section {
     }
 }
 
-@media(max-width: 1150px) {}
 
 .footer {
     padding: 2vw 0vw 0vw 0vw;
@@ -951,6 +1011,10 @@ section {
         &__info {
             max-width: 100%;
         }
+
+        &__icon {
+            margin-bottom: 1rem;
+        }
     }
 
     @media (max-width:576px) {
@@ -958,5 +1022,6 @@ section {
             max-width: 100%;
 
         }
+
     }
 }
