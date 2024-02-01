@@ -47,6 +47,7 @@ body {
 
 p {
     font-size: 14px;
+    font-family: Satoshi;
 }
 
 li {
@@ -58,7 +59,19 @@ li {
 }
 
 section {
-    padding-top: clamp(50px, 14vw, 16vh);
+    padding-top: 94px;
+}
+
+@media (max-width:768px) {
+    section {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width:576px) {
+    section {
+        padding-top: 50px;
+    }
 }
 
 .down {
@@ -66,29 +79,24 @@ section {
 }
 
 #section1 {
-    padding-top: clamp(14vh, 14vw, 16vh);
+    padding-top: clamp(80px, 14vw, 140px);
 }
 
 .background {
-    position: relative;
+    position: absolute;
     background-image: url("../images/dist/bodyline.avif");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
-    
 }
 
 .header {
-    width: 100%;
-    position: fixed;
     background-color: #171719;
     z-index: 3;
 
     &__container {
         padding-top: 5px;
     }
-
-    &__social {}
 
     &__network {
         gap: 12px;
@@ -99,6 +107,7 @@ section {
         height: 30px;
         border-radius: 19px;
         background: var(--Unnamed-Color, rgba(85, 85, 85, 0.10));
+        cursor: pointer;
     }
 
     &__connection {
@@ -123,10 +132,12 @@ section {
         padding-top: 15px;
         font-family: satoshi;
         font-weight: 700;
+
     }
 
     &__href {
         color: $background-card;
+        overflow: hidden;
 
         &:hover {
             color: $font-white;
@@ -156,7 +167,7 @@ section {
 
     &__ul {
         width: 100%;
-        gap: 3vw;
+        gap: 42px;
     }
 
     &__button {
@@ -182,6 +193,7 @@ section {
                 max-width: 300px;
                 height: 25px;
             }
+
         }
 
         &__ul {
@@ -190,7 +202,7 @@ section {
                 justify-content: center;
             }
 
-            gap: 1vw;
+            gap: 10px;
         }
 
         &__button {
@@ -206,10 +218,6 @@ section {
 
         &__logo {
             height: 55px;
-        }
-
-        &__ul {
-            gap: 0;
         }
 
         &__btn {
@@ -234,6 +242,16 @@ section {
             }
         }
 
+        &__lock {
+            background-color: rgba(136, 136, 136, 0);
+            transition: 0.3s ease;
+
+            &:hover {
+                background-color: #888888;
+
+            }
+        }
+
         &__mobile {
             width: 100px;
 
@@ -241,17 +259,26 @@ section {
     }
 }
 
+.modal {
+    &__href {
+        width: fit-content;
+    }
+}
+
 .home {
 
     &__wrap {
+        max-width: 1140px;
         position: relative;
         height: 600px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__baner {
         max-width: 541px;
+        margin-left: 4%;
     }
 
     &__h1 {
@@ -298,13 +325,21 @@ section {
     &__portret {
         position: absolute;
         right: 5%;
-        bottom: 5%;
+        bottom: 8%;
 
         svg {
             position: absolute;
         }
 
         z-index: -1;
+    }
+
+    &__star {
+        position: absolute;
+        width: 53px;
+        height: 53px;
+        top: 0;
+        right: clamp(0px, 5vw, -40px);
     }
 
     &__subtract {
@@ -328,13 +363,24 @@ section {
 
     }
 
-    &__background {
+    &__position {
         position: absolute;
         width: 100%;
+    }
+
+    &__border {
         height: 57%;
-        bottom: 5%;
-        background: var(--Unnamed-Color, linear-gradient(233deg, #17171A 27.06%, rgba(23, 23, 26, 0.00) 92.12%));
+        bottom: 1%;
         z-index: -2;
+        border: 2px solid var(--Unnamed-Color, #171719);
+    }
+
+    &__background {
+        height: 100%;
+        bottom: 12%;
+        right: 3%;
+        background: var(--Unnamed-Color, linear-gradient(233deg, #17171A 27.06%, rgba(23, 23, 26, 0.00) 92.12%));
+        z-index: -1;
     }
 
     @media (max-width:768px) {
@@ -352,11 +398,12 @@ section {
 
         &__portret {
             right: auto;
+            bottom: 3.2%;
+        }
 
-            img {
-                width: 281px;
-                height: 313px;
-            }
+        &__man {
+            width: 281px;
+            height: 321px;
         }
 
         &__baner {
@@ -364,6 +411,7 @@ section {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            margin-left: 0%;
         }
 
         &__curcle {
@@ -376,12 +424,22 @@ section {
             }
         }
 
+        &__href {
+            margin: auto;
+            width: 150px;
+        }
+
         &__paragraf {
             font-size: 14px;
         }
 
+        &__border {
+            height: 100%;
+        }
+
         &__background {
-            height: 97%;
+            height: 100%;
+            bottom: 2%;
         }
 
         &__main-btn {
@@ -389,6 +447,7 @@ section {
             height: 100px;
             flex-direction: column;
         }
+
     }
 }
 
@@ -599,10 +658,6 @@ section {
             left: 45%;
         }
     }
-
-    @media (max-width:500px) {
-        &__purple {}
-    }
 }
 
 .services {
@@ -683,8 +738,8 @@ section {
             margin-right: 10px;
         }
     }
-
 }
+
 
 .portfolio {
 
@@ -693,7 +748,7 @@ section {
         max-width: 426px;
 
         p {
-            color: $font-white;
+            color: $standart-color;
         }
     }
 
@@ -702,7 +757,7 @@ section {
     }
 
     &__span {
-        color: $font-white;
+        color: $standart-color;
     }
 
     &__blue {
@@ -728,6 +783,7 @@ section {
 
 .recomend {
     min-height: 588px;
+    position: relative;
 
     &__wrap {
         display: flex;
@@ -779,6 +835,30 @@ section {
         height: 55.396px;
     }
 
+    &__position {
+        position: absolute;
+    }
+
+    &__starlet {
+        width: 73px;
+        height: 73px;
+        top: -30px;
+        left: -30px;
+    }
+
+    &__star {
+        width: 47px;
+        height: 47px;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &__signature {
+        width: 150px;
+        height: 55px;
+    }
+
     @media (max-width:1200px) {
         &__wrap {
             justify-content: center;
@@ -811,13 +891,20 @@ section {
                 height: 80px;
             }
         }
+
+        &__starlet {
+            width: 50px;
+            height: 50px;
+            top: -30px;
+            left: 0px;
+        }
     }
 }
 
 .teams {
     &__wrap {
         max-width: 1140px;
-        gap: 20px;
+        gap: 50px;
     }
 
     &__main {
@@ -857,6 +944,7 @@ section {
 
     &__image-wrap {
         position: relative;
+
     }
 
     &__background {
@@ -867,12 +955,23 @@ section {
     }
 
     &__command {
-        max-width: 300px;
+        width: 246px;
+        height: 329px;
+    }
+
+    &__image {
+        height: 230px;
+    }
+
+    @media(max-width: 576px) {
+        &__wrap {
+            gap: 20px;
+        }
     }
 }
 
 .idea {
-    padding: clamp(60px, 10vw, 100px) 0px;
+    padding: clamp(85px, 10vw, 100px) 0px;
 
     &__container {
         max-width: 1031px;
@@ -892,7 +991,7 @@ section {
     &__text {
         h2 {
             color: $font-white;
-            font-size: clamp(18px, 1vw, 32px)
+            font-size: clamp(18px, 4vw, 32px)
         }
 
         p {
@@ -915,7 +1014,6 @@ section {
         width: 100%;
         height: 170px;
     }
-
 
 
     @media (max-width:768px) {
@@ -963,13 +1061,23 @@ section {
     }
 
     &__designer {
+        svg {
+            margin-right: 5px;
+        }
+
         span {
             color: $font-white;
+            font-weight: 700;
+            font-size: 16px;
         }
     }
 
     &__icon {
         gap: 12px;
+
+        a {
+            height: 100%;
+        }
     }
 
     &__curcle {
@@ -977,6 +1085,7 @@ section {
         height: 30px;
         border-radius: 19px;
         background: var(--Unnamed-Color, rgba(85, 85, 85, 0.1));
+        cursor: pointer;
     }
 
     &__ul {
@@ -984,10 +1093,27 @@ section {
     }
 
     &__li {
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: $font-white;
+        }
+
+        a {
+            transition: 0.3s ease;
+            color: $standart-color;
+
+            &:hover {
+                color: $font-white;
+            }
+        }
+
         span {
             width: 100%;
             margin-left: 5px;
         }
+
     }
 
     &__info {
@@ -1005,6 +1131,8 @@ section {
         display: block;
         margin-bottom: 1.5%;
         color: $standart-color;
+        font-family: "Satoshi";
+        font-size: 14px;
     }
 
     @media (max-width:992px) {

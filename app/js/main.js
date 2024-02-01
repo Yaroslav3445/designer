@@ -1,19 +1,15 @@
 
-// let soft = document.querySelectorAll'header'
-document.addEventListener('DOMContentLoaded', () => {
-    // Отримання всіх елементів навігації
-    var navLinks = document.querySelectorAll('.header__href');
+document.addEventListener("DOMContentLoaded", () => {
+    let navLinks = document.querySelectorAll(".header__href");
+    let ul = document.querySelector(".header__ul");
 
-    // Додавання обробників подій для кожного елемента навігації
     navLinks.forEach((navLink) => {
-        navLink.addEventListener('click', function (e)  {
-            // Відміна стандартної дії по кліку на посилання
-
+        navLink.addEventListener("click", function () {
             navLinks.forEach((link) => {
-                link.classList.remove('class-active');
+                link.classList.remove("class-active");
             });
 
-            this.classList.add('class-active');
+            this.classList.add("class-active");
         });
     });
-});
+}); 

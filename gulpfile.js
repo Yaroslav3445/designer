@@ -27,7 +27,7 @@ function sprite() {
 
 function images() {
     return src(['app/images/src/*.*', '!app/images/src/*.svg'])
-        .pipe(newer('app/images'))
+        .pipe(newer('app/images/dist'))
         .pipe(avif({ quality: 80 }))
 
         .pipe(src('app/images/src/*.*'))
