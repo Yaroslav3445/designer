@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
     <header class="header fixed-top">
         <div class="header__container container container d-flex justify-content-center flex-column">
             <div class="header__social d-flex flex-row justify-content-between">
@@ -62,43 +62,38 @@
                 </div>
             </div>
             <nav class="header__nav navbar navbar-expand-md navbar-light d-flex justify-content-between">
-                <div class="header__logo header__mobile d-flex align-items-center ">
-                    <svg width="24px" ; height="24px" ;>
+                <div class="header__logo header__mobile d-flex align-items-center">
+                    <svg width="24px" height="24px">
                         <use xlink:href="images/dist/sprite.svg#downloading"></use>
                     </svg>
                     <a href="#">designer</a>
                 </div>
                 <div class="header__menu d-flex justify-content-center flex-column">
                     <button class="header__tab navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <svg class="svg-list-dims">
                             <use xlink:href="images/dist/sprite.svg#list"></use>
                         </svg>
                     </button>
                     <div>
-                        <ul class="header__ul  collapse navbar-collapse navbar-nav" id="navbarNav">
-                            <li class="nav-item navbar-nav">
-                                <a class="header__href nav-link" data-bs-offset="500" data-bs-target="#navbarNav"
-                                    href="#section1">Home</a>
+                        <ul class="header__ul collapse navbar-collapse navbar-nav" id="navbarNav">
+                            <li class="nav-item nav-link">
+                                <a class="header__href " aria-current="page" data-bs-offset="500" href="#section1">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="header__href nav-link" data-bs-target="#navbarNav"
-                                    href="#section4">Servise</a>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section4">Servise</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="header__href nav-link" data-bs-target="#navbarNav"
-                                    href="#section5">Projects</a>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section5">Projects</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="header__href nav-link" data-bs-target="#navbarNav" href="#section3">About</a>
+                            <li class="nav-item nav-link">
+                                <a class="header__href  " href="#section3">About</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="header__href nav-link" data-bs-target="#navbarNav" href="#section2">Client</a>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section2">Client</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="header__href nav-link" data-bs-target="#navbarNav"
-                                    href="#section6">Contact</a>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section6">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -107,6 +102,7 @@
                     <button type="button" class="header__button text-light" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop">Discuss for Projects</button>
                 </div>
+            </nav>
         </div>
     </header>
     <div class="modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -155,19 +151,21 @@
 
                             </div>
                         </div>
-                        <div class="home__portret"><img class="home__man" src="images/dist/splash.png" alt="splash">
+                        <div class="home__portret "><img class="home__man" src="images/dist/splash.png" alt="splash">
                             <svg class="home__purple" width="51px" ; height="51px" ;>
                                 <use xlink:href="images/dist/sprite.svg#purple"></use>
                             </svg>
                             <svg class="home__subtract" width="51px" ; height="51px" ;>
                                 <use xlink:href="images/dist/sprite.svg#Subtract"></use>
                             </svg>
-                            <img class="home__star" src="images/dist/aliia.svg" alt="">
+                            <img class="home__star" src="images/dist/bigstar.svg" alt="">
                             <div class="home__curcle">
                                 <svg width="134px" ; height="134px" ;>
                                     <use xlink:href="images/dist/sprite.svg#curcle3"></use>
                                 </svg>
                             </div>
+                            <img class="home__subtractOpacity home__position" src="images/dist/subtractopasity.webp"
+                                alt="subtract">
                         </div>
                         <div class="home__border home__position">
                             <div class="home__background  home__position">
@@ -261,30 +259,27 @@
                                 <div
                                     class="process__diamond d-flex justify-content-center align-items-center order-lg-first   col-md-12  col-lg-4 col-xl-4">
                                     <span>Empathize</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple1 process__purple"
                                         src="images/dist/purpleArrow.svg" alt="arrow">
                                 </div>
                                 <div
                                     class="process__diamond  d-flex justify-content-center align-items-center order-md-last  col-md-12   col-lg-4  col-xl-4">
                                     <span> Ideate</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple1 process__purple"
                                         src="images/dist/purpleArrow.svg" alt="arrow">
                                 </div>
                                 <div
                                     class="process__diamond  process__diamond-position  d-flex justify-content-center order-lg-last align-items-center col-md-12 col-lg-12 col-xl-12">
                                     <span>Define</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple2 process__purple"
                                         src="images/dist/purpleArrow.svg" alt="arrow">
                                 </div>
@@ -293,30 +288,28 @@
                                 <div
                                     class="process__diamond  d-flex justify-content-center align-items-center order-md-last order-lg-first col-md-12 col-lg-12 col-xl-12">
                                     <span class="text-center">Qualitative test</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple4 process__purple "
                                         src="images/dist/purpleArrow.svg" alt="arrow">
                                 </div>
                                 <div
-                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center col-md-12 col-lg-4 col-xl-4">
+                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-first col-md-12 col-lg-4 col-xl-4">
                                     <span class="text-center"> Prototype</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple2 process__purple3 process__purple"
                                         src="images/dist/purpleArrow.svg" alt="arrow">
                                 </div>
                                 <div
-                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-last col-md-12 col-lg-4 col-xl-4">
+                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-last order-md-last col-md-12 col-lg-4 col-xl-4">
                                     <span class="text-center">Qualitative test</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.png"
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
                                         alt="image">
-                                    <img class="process__romb process__absolute" src="images/dist/Rectangle 60.png"
-                                        alt="romb">
+                                    <div class="process__rombs"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -355,6 +348,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                         <div class="services__info card d-flex justify-content-center text-center">
@@ -379,6 +373,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                         <div class="services__info card d-flex justify-content-center text-center">
@@ -402,6 +397,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                         <div class="services__info card d-flex justify-content-center text-center">
@@ -425,6 +421,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                         <div class="services__info card d-flex justify-content-center text-center">
@@ -448,6 +445,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                         <div class="services__info card d-flex justify-content-center text-center">
@@ -471,6 +469,7 @@
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg>
                                 </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
                             </div>
                         </div>
                     </div>
@@ -538,7 +537,7 @@
                         <div class="teams__command  ">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
-                                    <img class="teams__background" src="images/dist/Rectangle.png" alt="background">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
                                     <img class="teams__image" src="images/dist/man 1.png" alt="teams">
                                 </div>
                                 <h3>Front-end Developer</h3>
@@ -549,7 +548,7 @@
                         <div class="teams__command  ">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
-                                    <img class="teams__background" src="images/dist/Rectangle.png" alt="background">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
                                     <img class="teams__image" src="images/dist/women.png" alt="teams">
                                 </div>
                                 <h3>UI & UX Design</h3>
@@ -561,7 +560,7 @@
                         <div class="teams__command  ">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
-                                    <img class="teams__background" src="images/dist/Rectangle.png" alt="background">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
                                     <img class="teams__image" src="images/dist/man 2.png" alt="teams">
                                 </div>
                                 <h3>Full-stack Developer</h3>
@@ -572,7 +571,7 @@
                         <div class="teams__command   ">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
-                                    <img class="teams__background" src="images/dist/Rectangle.png" alt="background">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
                                     <img class="teams__image" src="images/dist/man 3.png" alt="teams">
                                 </div>
                                 <h3>Back-end Developer</h3>
@@ -598,7 +597,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer d-flex justify-content-center" id="section6">
+        <footer class="footer d-flex justify-content-center " id="section6">
             <div class="footer__wrap container  d-flex flex-column  align-items-center ">
                 <div class="footer__menu container d-flex flex-row  justify-content-between row">
                     <div class="footer__network d-flex flex-column col-12 col-sm-6 col-md-3 col-lg-auto">
@@ -669,7 +668,7 @@
                                 <div><svg width="20px" ; height="20px" ;>
                                         <use xlink:href="images/dist/sprite.svg#send"></use>
                                     </svg></div>
-                                <a href=" https://www.linkedin.com/feed/" >prystash.yaroslav
+                                <a href=" https://www.linkedin.com/feed/">prystash.yaroslav
                                     @gmail.com</a>
                             </li>
                             <li class="footer__li d-flex flex-row">
@@ -684,9 +683,6 @@
                 <span class="footer__end">Copyright 2022 | All Rights Reserved</span>
             </div>
         </footer>
-        <svg width="48px" ; height="48px" ;>
-            <use xlink:href="images/dist/sprite.svg#"></use>
-        </svg>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
