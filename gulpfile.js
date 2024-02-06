@@ -91,7 +91,7 @@ function building() {
         .pipe(dest('dist'))
 }
 function deploy() {
-    return src('./dist/*.*')
+    return src('./dist/*')
         .pipe(ghPages());
 }
 exports.sprite = sprite;
