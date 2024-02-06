@@ -11,18 +11,20 @@ const imagemin = require('gulp-imagemin')
 const newer = require('gulp-newer')
 const svgSprite = require('gulp-svg-sprite')
 const include = require('gulp-include')
+const ghPages = require('gulp-gh-pages');
+
 
 function sprite() {
     return src('app/images/dist/*.svg')
         .pipe(svgSprite({
             mode: {
                 stack: {
-                    sprite: '../sprite.svg',
+                    sprite: './images/dist/sprite.svg',
                     example: true
                 }
             }
         }))
-        .pipe(dest('app/images/dist'))
+        .pipe(dest('dist/images/dist'))
 }
 
 function images() {
@@ -88,6 +90,10 @@ function building() {
         { base: 'app' })
         .pipe(dest('dist'))
 }
+function deploy() {
+    return src('./dist/*.*')
+        .pipe(ghPages());
+}
 exports.sprite = sprite;
 exports.styles = styles;
 exports.images = images;
@@ -95,4 +101,5 @@ exports.scripts = scripts;
 exports.watching = watching;
 exports.building = building;
 exports.build = series(cleanDist, building)
+exports.deploy = deploy;
 exports.default = parallel(styles, images, scripts, watching) 

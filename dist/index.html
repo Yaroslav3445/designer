@@ -4,24 +4,695 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Designer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Space+Grotesk:300,regular,500,600,700" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
-<div>
-    heloo
-    vorld
-    ddd
-    aseor
-    aseor
-    aseor
-    aseor
-</div>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+    <header class="header fixed-top">
+        <div class="header__container container container d-flex justify-content-center flex-column">
+            <div class="header__social d-flex flex-row justify-content-between">
+                <div class="header__network  d-flex flex-row">
+                    <div class="header__icon d-flex justify-content-center ">
+                        <a href="https://www.linkedin.com/feed/">
+                            <svg width="12px" ; height="12px" ;>
+                                <use xlink:href="./images/dist/sprite.svg#in"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="header__icon  d-flex justify-content-center align-items-center">
+                        <svg width="7px" ; height="13px" ;>
+                            <use xlink:href="images/dist/sprite.svg#facebook"></use>
+                        </svg>
+                    </div>
+                    <div class="header__icon  d-flex justify-content-center align-items-center">
+                        <svg width="7px" ; height="12px" ;>
+                            <use xlink:href="images/dist/sprite.svg#telegram"></use>
+                        </svg>
+                    </div>
+                    <div class="header__icon  d-flex justify-content-center align-items-center">
+                        <svg width="16px" ; height="12px" ;>
+                            <use xlink:href="images/dist/sprite.svg#youtube"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header__connection  d-flex flex-row ustify-content-between">
+                    <div class="header__connectionIcon d-flex flex-row align-items-center">
+                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                            <use xlink:href="images/dist/sprite.svg#call"></use>
+                        </svg>
+                        <span>+0682054247</span>
+                    </div>
+                    <div class="header__connectionIcon d-flex flex-row align-items-center">
+                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                            <use xlink:href="images/dist/sprite.svg#send"></use>
+                        </svg>
+                        <span>prystash.yaroslav@gmail.com</span>
+                    </div>
+                    <div class="header__connectionIcon d-flex flex-row align-items-center">
+                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                            <use xlink:href="images/dist/sprite.svg#location"></use>
+                        </svg>
+                        <span>6391 Elgin St. Celina, Delaware</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="header__nav navbar navbar-expand-md navbar-light d-flex justify-content-between">
+                <div class="header__logo header__mobile d-flex align-items-center">
+                    <svg width="24px" height="24px">
+                        <use xlink:href="images/dist/sprite.svg#downloading"></use>
+                    </svg>
+                    <a href="#">designer</a>
+                </div>
+                <div class="header__menu d-flex justify-content-center flex-column">
+                    <button class="header__tab navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <svg class="svg-list-dims">
+                            <use xlink:href="images/dist/sprite.svg#list"></use>
+                        </svg>
+                    </button>
+                    <div>
+                        <ul class="header__ul collapse navbar-collapse navbar-nav" id="navbarNav">
+                            <li class="nav-item nav-link">
+                                <a class="header__href " aria-current="page" data-bs-offset="500"
+                                    href="#section1">Home</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section2">Client</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="header__href  " href="#section3">About</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section4">Servise</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section5">Projects</a>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="header__href " href="#section6">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header__btn header__mobile">
+                    <button type="button" class="header__button text-light" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">Discuss for Projects</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content bg-dark bg-gradient">
+                <div class="modal-header">
+                    <h1 class="modal-title text-light fs-5" id="staticBackdropLabel">Contacts</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex flex-column ">
+                    <a class="modal__href" href="https://www.linkedin.com/feed/">My Linkedin:
+                        https://www.linkedin.com/feed/</a>
+                    <a class="modal__href" href="https://www.linkedin.com/feed/">My umber: +380682054247</a>
+                    <a class="modal__href" href="https://github.com/Yaroslav3445">My Github:
+                        https://github.com/Yaroslav3445</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background container-fluid">
+        <main>
+            <section id="section1">
+                <div class="home d-flex flex-row justify-content-center">
+                    <div class="home__wrap container">
+                        <div class="home__baner down">
+                            <h1 class="home__h1 text-small">This is your designer
+                                <span class="d-flex flex-row"> Esther Howard</span>
+                            </h1>
+                            <p class="home__paragraf">
+                                Hello, I'm a designer with a blend of technical expertise and creative flair! My name
+                                isEsther Howard, and I'm immersed in the world of design, where every pixel and vector
+                                holds significance.</p>
+                            <div class="home__main-btn ">
+                                <button type="button" class="home__btn text-light" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Discuss for Projects</button>
+                                <button
+                                    class="home__href  text-light d-flex flex-row justify-content-between align-items-center"
+                                    data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="button">View
+                                    Portfolios<svg width="30px" ; height="30px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg></button>
+
+                            </div>
+                        </div>
+                        <div class="home__portret "><img class="home__man" src="images/dist/splash.png" alt="splash">
+                            <svg class="home__purple" width="51px" ; height="51px" ;>
+                                <use xlink:href="images/dist/sprite.svg#purple"></use>
+                            </svg>
+                            <svg class="home__subtract" width="51px" ; height="51px" ;>
+                                <use xlink:href="images/dist/sprite.svg#Subtract"></use>
+                            </svg>
+                            <img class="home__star" src="images/dist/bigstar.svg" alt="">
+                            <div class="home__curcle">
+                                <svg width="134px" ; height="134px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#curcle3"></use>
+                                </svg>
+                            </div>
+                            <img class="home__subtractOpacity home__position" src="images/dist/subtractopasity.webp"
+                                alt="subtract">
+                        </div>
+                        <div class="home__border home__position">
+                            <div class="home__background  home__position">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section2">
+                <div class="speciality d-flex align-items-center flex-column">
+                    <div
+                        class="speciality__main down d-flex align-items-center flex-column justify-content-between text-center">
+                        <span>SPECIALITY</span>
+                        <h1>My <span class="speciality__soft">specialities</span></h1>
+                        <p>Designers often work in a team with other professionals such as developers, marketers and
+                            project managers, so it is important to have teamwork skills.</p>
+                    </div>
+                    <div class="speciality__card container row justify-content-center">
+                        <div class="speciality__info text-center card  col-lg-auto">
+                            <div class="speciality__icon">
+                                <svg class="svg-Subtract-dims" width="50px" ; height="50px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#Subtract"></use>
+                                </svg>
+                                <svg class="" width="48px" ; height="48px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#email"></use>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h5 class=" card-title">Email marketing</h5>
+                                <div class="speciality__line">
+                                    <span class="speciality__blue-line"></span>
+                                    <span class="speciality__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Email marketing is a powerful tool in Internet marketing that uses
+                                    email to engage with audiences, improve customer interactions, and maintain
+                                    relationships.</p>
+                            </div>
+                        </div>
+                        <div class="speciality__info text-center card  col-lg-auto">
+                            <div class="speciality__icon">
+                                <svg class="svg-Subtract-dims" width="50px" ; height="50px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#Subtract"></use>
+                                </svg>
+                                <svg width="48px" ; height="48px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#storefront"></use>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h5 class=" card-title">Market analysis</h5>
+                                <div class="speciality__line">
+                                    <span class="speciality__blue-line"></span>
+                                    <span class="speciality__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Your success in business starts with thorough market analysis!
+                                    Market analysis is your best ally in a world of competition and opportunity.</p>
+                            </div>
+                        </div>
+                        <div class="speciality__info text-center card  col-lg-auto">
+                            <div class="speciality__icon">
+                                <svg class="svg-Subtract-dims" width="50px" ; height="50px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#Subtract"></use>
+                                </svg>
+                                <svg class="" width="48px" ; height="48px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#query_stats"></use>
+                                </svg>
+                            </div>
+                            <div class="card-body">
+                                <h5 class=" card-title">Keyword research</h5>
+                                <div class="speciality__line">
+                                    <span class="speciality__blue-line"></span>
+                                    <span class="speciality__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">In the field of design, keywords are important for effectively
+                                    presenting your skills, experience and individual approac.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section3">
+                <div class="process d-flex justify-content-center">
+                    <div class="process__wrap   container d-flex align-items-center flex-column">
+                        <div class="process__main down text-center">
+                            <span class="process__span">ABOUT ME</span>
+                            <h1 class="process__h1">My <span class="process__blue">work process</span></h1>
+                            <p>Your success is my primary goal! We start with an in-depth consultation, where I
+                                thoroughly study your needs and goals.</p>
+                        </div>
+                        <div class="process__container row d-flex justify-content-center row">
+                            <div class="process__link  row justify-content-between">
+                                <div
+                                    class="process__diamond d-flex justify-content-center align-items-center order-lg-first   col-md-12  col-lg-4 col-xl-4">
+                                    <span>Empathize</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+                                    <img class="process__arrow  process__purple1 process__purple"
+                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                </div>
+                                <div
+                                    class="process__diamond  d-flex justify-content-center align-items-center order-md-last  col-md-12   col-lg-4  col-xl-4">
+                                    <span> Ideate</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+                                    <img class="process__arrow  process__purple1 process__purple"
+                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                </div>
+                                <div
+                                    class="process__diamond  process__diamond-position  d-flex justify-content-center order-lg-last align-items-center col-md-12 col-lg-12 col-xl-12">
+                                    <span>Define</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+                                    <img class="process__arrow  process__purple2 process__purple"
+                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                </div>
+                            </div>
+                            <div class="process__link container row justify-content-between">
+                                <div
+                                    class="process__diamond  d-flex justify-content-center align-items-center order-md-last order-lg-first col-md-12 col-lg-12 col-xl-12">
+                                    <span class="text-center">Qualitative test</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+                                    <img class="process__arrow  process__purple4 process__purple "
+                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                </div>
+                                <div
+                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-first col-md-12 col-lg-4 col-xl-4">
+                                    <span class="text-center"> Prototype</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+                                    <img class="process__arrow  process__purple2 process__purple3 process__purple"
+                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                </div>
+                                <div
+                                    class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-last order-md-last col-md-12 col-lg-4 col-xl-4">
+                                    <span class="text-center">Qualitative test</span>
+                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
+                                        alt="image">
+                                    <div class="process__rombs"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section4">
+                <div class="services container d-flex flex-column align-items-center">
+                    <div class="services__main down d-flex justify-content-center text-center flex-column">
+                        <span>SERVICES</span>
+                        <h1 class="services__h1">My <span class="services__span">other services</span></h1>
+                        <p>
+                            Powerful images, creative logos and effective media. My graphic design is the key to an
+                            impressive image of your brand</p>
+                    </div>
+                    <div class="services__wrap justify-content-center row">
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#triagle"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">Digital branding</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Our "Digital Branding" service is not just creating a logo. It is
+                                    an integrated approach to creating a digital image that includes web design, social
+                                    networks, interactivity and online presence
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span><svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#paint"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">Creative solutions</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">
+                                    Our creative solutions include a unique design that goes beyond the usual standards
+                                    and creates a unique image.
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span> <svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg class="" width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#marketing"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">Marketing solutions</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Development of marketing strategies that contribute to the growth
+                                    of your business and define its unique place in the market.
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span> <svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg class="" width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#ball"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">Business analytics</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Conducting in-depth data analysis to gain a full understanding of
+                                    business processes and identify opportunities for optimization.
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span> <svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg class="" width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#monitor"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">UI & UX Design</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Development of aesthetic and functional interface elements that
+                                    create a unique image of your product or service.
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span> <svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="/images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                        <div class="services__info card d-flex justify-content-center text-center">
+                            <div class="services__icon d-flex justify-content-center align-items-end">
+                                <svg class="" width="106px" ; height="106px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#camera"></use>
+                                </svg>
+                            </div>
+                            <div class="services__body card-body">
+                                <h5 class="card-title">Photography</h5>
+                                <div class="services__line">
+                                    <span class="services__blue-line"></span>
+                                    <span class="services__blue-line-min"></span>
+                                </div>
+                                <p class="card-text">Applying a creative approach and non-standard vision to create
+                                    unique and memorable images.
+                                </p>
+                                <button class="services__button" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop"><span>Discuss
+                                        for Projects</span> <svg width="14px" ; height="14px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#Arrow"></use>
+                                    </svg>
+                                </button>
+                                <img class="services__subtract" src="images/dist/subtractopasity.webp" alt="subtract">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section5">
+                <div class="portfolio d-flex flex-column align-items-center text-center">
+                    <div class="portfolio__main down">
+                        <span class="portfolio__span">PORTFOLIOS</span>
+                        <h1 class="portfolio__h1">My <span class="portfolio__blue">completed projects</span></h1>
+                        <p>Disclosing the details of the professional approach to each project, starting from the
+                            concept and ending with the results.</p>
+                    </div>
+                    <div class="portfolio__background d-flex justify-content-center align-items-center"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <img src="images/dist/portfolio.png" alt="portfolio">
+                        <button class="portfolio__button">View all
+                            Projects</button>
+                    </div>
+                </div>
+            </section>
+            <section id="section5">
+                <div class="recomend container d-flex justify-content-center align-items-center">
+                    <div class="recomend__wrap  row">
+                        <div class="recomend__portret  justify-content-center">
+                            <img class="recomend__starlet recomend__position" src="images/dist/star.png" alt="star">
+                            <img src="images/dist/unsplash.png" alt="recomend">
+                            <div class="recomend__border">
+                                <svg width="134px" ; height="134px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#curcle3"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="recomend__text">
+                            <svg class="recomend__image" width="58px" ; height="58px" ;>
+                                <use xlink:href="images/dist/sprite.svg#Subtract"></use>
+                            </svg>
+                            <h5>“Service is good and I recommend”</h5>
+                            <p>Your words are a great motivation for our team. We always work to provide you with high
+                                quality and satisfactory service. If you have any new needs or ideas, please let us
+                                know. We are always ready to work for your comfort and success.
+                            </p>
+                            <p>
+                                Also, do not forget to follow our updates and news. We are always improving our services
+                                to provide you with only the best. Thank you for choosing us, and we hope for long-term
+                                and successful cooperation!
+                            </p>
+                            <p> We hope to meet again in the future and thank you for your trust!</p>
+                            <img class="recomend__signature" src="images/dist/signature.svg" alt="signature">
+                        </div>
+                    </div>
+                    <img class="recomend__star  recomend__position" src="images/dist/star.svg" alt="star">
+                </div>
+            </section>
+            <section id="section7">
+                <div class="teams d-flex flex-column align-items-center">
+                    <div class="teams__main down text-center ">
+                        <span class="teams__span">TEAMS</span>
+                        <h1 class="teams__h1">My <span class="teams__blue">team members</span></h1>
+                        <p>
+                            Our team always works towards achieving high standards and meeting the needs of our
+                            customers.</p>
+                    </div>
+                    <div class="teams__wrap d-flex flex-row justify-content-center flex-wrap">
+                        <div class="teams__command  ">
+                            <div class="teams__person">
+                                <div class="teams__image-wrap">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
+                                    <img class="teams__image" src="images/dist/man 1.png" alt="teams">
+                                </div>
+                                <h3>Front-end Developer</h3>
+                                <p>
+                                    Designing interfaces that look great on any device and all popular browsers.</p>
+                            </div>
+                        </div>
+                        <div class="teams__command  ">
+                            <div class="teams__person">
+                                <div class="teams__image-wrap">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
+                                    <img class="teams__image" src="images/dist/women.png" alt="teams">
+                                </div>
+                                <h3>UI & UX Design</h3>
+                                <p>
+                                    Development of aesthetically pleasing and functional elements that ensure a great
+                                    appearance of websites.</p>
+                            </div>
+                        </div>
+                        <div class="teams__command  ">
+                            <div class="teams__person">
+                                <div class="teams__image-wrap">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
+                                    <img class="teams__image" src="images/dist/man 2.png" alt="teams">
+                                </div>
+                                <h3>Full-stack Developer</h3>
+                                <p>Expertise in the development of user interfaces (Front-end) and server logic
+                                    (Back-end)</p>
+                            </div>
+                        </div>
+                        <div class="teams__command   ">
+                            <div class="teams__person">
+                                <div class="teams__image-wrap">
+                                    <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
+                                    <img class="teams__image" src="images/dist/man 3.png" alt="teams">
+                                </div>
+                                <h3>Back-end Developer</h3>
+                                <p>Ensuring a high level of security for processing confidential information and setting
+                                    up an authentication system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="idea container container d-flex justify-content-center align-items-center">
+                    <div class="idea__container container d-flex  align-items-center">
+                        <div class="idea__massage gap-2 d-flex flex-row align-items-center">
+                            <img src="images/dist/paper plane.png" alt="massage">
+                            <div class="idea__text">
+                                <h2>Have any project idea?</h2>
+                                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            </div>
+                        </div>
+                        <button type="button" class="idea__btn" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop">Contact Now</button>
+                    </div>
+                    <img class="idea__walls" src="images/dist/walls.png" alt="background">
+                </div>
+            </section>
+        </main>
+        <footer class="footer d-flex justify-content-center ">
+            <div class="footer__wrap container  d-flex flex-column  align-items-center ">
+                <div class="footer__menu container d-flex flex-row  justify-content-between row">
+                    <div class="footer__network d-flex flex-column col-12 col-sm-6 col-md-3 col-lg-auto">
+                        <div class="footer__designer d-flex flex-row">
+                            <svg width="24px" ; height="24px" ;>
+                                <use xlink:href="images/dist/sprite.svg#downloading"></use>
+                            </svg>
+                            <span>designer</span>
+                        </div>
+                        <p>You have the vision, and we have the talent and knowledge to make it visible and impressive.
+                        </p>
+                        <div class="footer__icon d-flex flex-row ">
+                            <div class="footer__curcle d-flex justify-content-center align-items-center">
+                                <a href="https://www.linkedin.com/feed/">
+                                    <svg width="12px" ; height="12px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#in"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="footer__curcle d-flex justify-content-center align-items-center">
+                                <svg width="7px" ; height="13px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#facebook"></use>
+                                </svg>
+                            </div>
+                            <div class="footer__curcle d-flex justify-content-center align-items-center">
+                                <svg width="7px" ; height="12px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#telegram"></use>
+                                </svg>
+                            </div>
+                            <div class="footer__curcle d-flex justify-content-center align-items-center">
+                                <svg width="16px" ; height="12px" ;>
+                                    <use xlink:href="images/dist/sprite.svg#youtube"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__navigation col-12 col-sm-6 col-md-3 col-lg-auto">
+                        <h5>Quick link</h5>
+                        <ul class="footer__ul text-start">
+                            <li class="footer__li"><a href="#section1">Home</a></li>
+                            <li class="footer__li"><a href="#section4">Service</a></li>
+                            <li class="footer__li"><a href="#section5">Projects</a></li>
+                            <li class="footer__li"><a href="#section3">About</a></li>
+                            <li class="footer__li"><a href="#section2">Client</a></li>
+                            <li class="footer__li"><a href="#section6">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__info col-12  col-sm-6 col-md-3 col-lg-auto">
+                        <h5>Important</h5>
+                        <ul class="footer__ul">
+                            <li class="footer__li">Career</li>
+                            <li class="footer__li">Terms & Conditions</li>
+                            <li class="footer__li">Privacy Policy</li>
+                            <li class="footer__li">Cookies Policy</li>
+                            <li class="footer__li">Social Work</li>
+                        </ul>
+                    </div>
+                    <div class="footer__info col-12 col-sm-6 col-md-3 col-lg-auto">
+                        <h5>Contacts</h5>
+                        <ul class="footer__ul">
+                            <li class="footer__li d-flex flex-row">
+                                <div><svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#call"></use>
+                                    </svg>
+                                </div><span>+0682054247</span>
+                            </li>
+                            <li class="footer__li d-flex">
+                                <div><svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#send"></use>
+                                    </svg></div>
+                                <a href=" https://www.linkedin.com/feed/">prystash.yaroslav
+                                    @gmail.com</a>
+                            </li>
+                            <li class="footer__li d-flex flex-row">
+                                <div> <svg width="20px" ; height="20px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#location"></use>
+                                    </svg></div><span>6391 Elgin St. Celina, Delaware</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__line"></div>
+                <span class="footer__end">Copyright 2022 | All Rights Reserved</span>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
