@@ -13,18 +13,17 @@ const svgSprite = require('gulp-svg-sprite')
 const include = require('gulp-include')
 const ghPages = require('gulp-gh-pages');
 
-
 function sprite() {
     return src('app/images/dist/*.svg')
         .pipe(svgSprite({
             mode: {
                 stack: {
-                    sprite: './images/dist/sprite.svg',
+                    sprite: '../sprite.svg',
                     example: true
                 }
             }
         }))
-        .pipe(dest('dist/images/dist'))
+        .pipe(dest('app/images/dist'))
 }
 
 function images() {

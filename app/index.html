@@ -13,6 +13,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+   
     <header class="header fixed-top">
         <div class="header__container container container d-flex justify-content-center flex-column">
             <div class="header__social d-flex flex-row justify-content-between">
@@ -42,19 +43,22 @@
                 </div>
                 <div class="header__connection  d-flex flex-row ustify-content-between">
                     <div class="header__connectionIcon d-flex flex-row align-items-center">
-                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                        <svg data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="header__lock" width="20px" ;
+                            height="20px" ;>
                             <use xlink:href="images/dist/sprite.svg#call"></use>
                         </svg>
                         <span>+0682054247</span>
                     </div>
                     <div class="header__connectionIcon d-flex flex-row align-items-center">
-                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                        <svg data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="header__lock" width="20px" ;
+                            height="20px" ;>
                             <use xlink:href="images/dist/sprite.svg#send"></use>
                         </svg>
                         <span>prystash.yaroslav@gmail.com</span>
                     </div>
                     <div class="header__connectionIcon d-flex flex-row align-items-center">
-                        <svg class="header__lock" width="20px" ; height="20px" ;>
+                        <svg data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="header__lock" width="20px" ;
+                            height="20px" ;>
                             <use xlink:href="images/dist/sprite.svg#location"></use>
                         </svg>
                         <span>6391 Elgin St. Celina, Delaware</span>
@@ -95,7 +99,7 @@
                                 <a class="header__href " href="#section5">Projects</a>
                             </li>
                             <li class="nav-item nav-link">
-                                <a class="header__href " href="#section6">Contact</a>
+                                <a class="header__href" href="#section6">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -107,6 +111,7 @@
             </nav>
         </div>
     </header>
+   
     <div class="modal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog ">
@@ -120,7 +125,7 @@
                         https://www.linkedin.com/feed/</a>
                     <a class="modal__href" href="https://www.linkedin.com/feed/">My umber: +380682054247</a>
                     <a class="modal__href" href="https://github.com/Yaroslav3445">My Github:
-                        https://github.com/Yaroslav3445</a>
+                        https://github.com/Yaroslav3445 </a>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -150,7 +155,6 @@
                                     Portfolios<svg width="30px" ; height="30px" ;>
                                         <use xlink:href="images/dist/sprite.svg#Arrow"></use>
                                     </svg></button>
-
                             </div>
                         </div>
                         <div class="home__portret "><img class="home__man" src="images/dist/splash.png" alt="splash">
@@ -160,7 +164,7 @@
                             <svg class="home__subtract" width="51px" ; height="51px" ;>
                                 <use xlink:href="images/dist/sprite.svg#Subtract"></use>
                             </svg>
-                            <img class="home__star" src="images/dist/bigstar.svg" alt="">
+                            <img class="home__star" src="images/dist/star.png" alt="star">
                             <div class="home__curcle">
                                 <svg width="134px" ; height="134px" ;>
                                     <use xlink:href="images/dist/sprite.svg#curcle3"></use>
@@ -260,58 +264,103 @@
                             <div class="process__link  row justify-content-between">
                                 <div
                                     class="process__diamond d-flex justify-content-center align-items-center order-lg-first   col-md-12  col-lg-4 col-xl-4">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span>Empathize</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
                                     <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple1 process__purple"
-                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                        src="images/dist/bluearrow.webp" alt="arrow">
                                 </div>
                                 <div
                                     class="process__diamond  d-flex justify-content-center align-items-center order-md-last  col-md-12   col-lg-4  col-xl-4">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span> Ideate</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
                                     <div class="process__rombs"></div>
-                                    <img class="process__arrow  process__purple1 process__purple"
-                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                    <img class="process__arrow  process__purple1 process__purple">
+                                    <svg width="100px" ; height="100px" ;>
+                                        <use xlink:href="images/dist/sprite.svg#arrow-up-solid"></use>
+                                    </svg>
                                 </div>
                                 <div
                                     class="process__diamond  process__diamond-position  d-flex justify-content-center order-lg-last align-items-center col-md-12 col-lg-12 col-xl-12">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span>Define</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
                                     <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple2 process__purple"
-                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                        src="images/dist/bluearrow.webp" alt="arrow">
                                 </div>
                             </div>
                             <div class="process__link container row justify-content-between">
                                 <div
                                     class="process__diamond  d-flex justify-content-center align-items-center order-md-last order-lg-first col-md-12 col-lg-12 col-xl-12">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span class="text-center">Qualitative test</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
+
                                     <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple4 process__purple "
-                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                        src="images/dist/bluearrow.webp" alt="arrow">
                                 </div>
                                 <div
                                     class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-first col-md-12 col-lg-4 col-xl-4">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span class="text-center"> Prototype</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
+
                                     <div class="process__rombs"></div>
                                     <img class="process__arrow  process__purple2 process__purple3 process__purple"
-                                        src="images/dist/purpleArrow.svg" alt="arrow">
+                                        src="images/dist/bluearrow.webp" alt="arrow">
                                 </div>
                                 <div
                                     class="process__diamond process__diamond-position d-flex justify-content-center align-items-center order-md-last order-md-last col-md-12 col-lg-4 col-xl-4">
+                                    <svg class="process__image process__absolute" xmlns="http://www.w3.org/2000/svg"
+                                        width="154" height="154" viewBox="0 0 184 184">
+                                        <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:rgb(255, 253, 253)" />
+                                            <stop offset="100%" style="stop-color:rgb(70, 69, 69)" />
+                                        </linearGradient>
+                                        <rect x="0" y="0" width="184" height="184" rx="18" ry="18" fill="url(#gradient)"
+                                            stroke="url(#strokeGradient)" stroke-dasharray="7" />
+                                    </svg>
                                     <span class="text-center">Qualitative test</span>
-                                    <img class="process__image process__absolute" src="images/dist/diamond.webp"
-                                        alt="image">
                                     <div class="process__rombs"></div>
-
                                 </div>
                             </div>
                         </div>
@@ -493,7 +542,7 @@
                     </div>
                 </div>
             </section>
-            <section id="section5">
+            <section>
                 <div class="recomend container d-flex justify-content-center align-items-center">
                     <div class="recomend__wrap  row">
                         <div class="recomend__portret  justify-content-center">
@@ -526,8 +575,8 @@
                     <img class="recomend__star  recomend__position" src="images/dist/star.png" alt="star">
                 </div>
             </section>
-            <section id="section7">
-                <div class="teams d-flex flex-column align-items-center">
+            <section>
+                <div class="teams d-flex flex-column  align-items-center">
                     <div class="teams__main down text-center ">
                         <span class="teams__span">TEAMS</span>
                         <h1 class="teams__h1">My <span class="teams__blue">team members</span></h1>
@@ -559,7 +608,7 @@
                                     appearance of websites.</p>
                             </div>
                         </div>
-                        <div class="teams__command  ">
+                        <div class="teams__command ">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
                                     <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
@@ -570,7 +619,7 @@
                                     (Back-end)</p>
                             </div>
                         </div>
-                        <div class="teams__command   ">
+                        <div class="teams__command">
                             <div class="teams__person">
                                 <div class="teams__image-wrap">
                                     <img class="teams__background" src="images/dist/Rectangle.webp" alt="background">
@@ -583,6 +632,8 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <section id="section6">
                 <div class="idea container container d-flex justify-content-center align-items-center">
                     <div class="idea__container container d-flex  align-items-center">
                         <div class="idea__massage gap-2 d-flex flex-row align-items-center">
@@ -599,7 +650,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer d-flex justify-content-center ">
+        <footer class="footer d-flex justify-content-center">
             <div class="footer__wrap container  d-flex flex-column  align-items-center ">
                 <div class="footer__menu container d-flex flex-row  justify-content-between row">
                     <div class="footer__network d-flex flex-column col-12 col-sm-6 col-md-3 col-lg-auto">
