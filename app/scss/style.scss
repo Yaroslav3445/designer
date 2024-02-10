@@ -103,8 +103,9 @@ section {
 
 
 .header {
-    background-color: #171719;
+    background-color: rgba(23, 23, 25, 0.5);
     z-index: 3;
+    backdrop-filter: blur(10px);
 
     &__container {
         padding-top: 5px;
